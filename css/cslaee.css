@@ -1,0 +1,56 @@
+﻿body {
+    text-align: center; /* this is required for old versions of IE */
+}
+
+#centered {
+    width: 350px; /* this is the width of the center column (px, em or %) */
+    text-align: left; /*resets the text alignment back to left */
+    margin: 0 auto; /* auto centers the div in standards complaint browsers */
+}
+
+f1 {
+  font-weight: 100;
+  font-variant-ligatures: normal;
+  font-size: 0.5rem;
+  letter-spacing: 1px;
+}
+
+f2 {
+  font-weight: 100;
+  font-variant-ligatures: normal;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+f3 {
+  font-weight: 100;
+  font-variant-ligatures: normal;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: red;
+}
+
+f4 {
+  font-weight: 100;
+  font-variant-ligatures: normal;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  color: red;
+}
+
+
+/*<body bgcolor="#1D2731"> Irory Black*/ 
+
+
+a:link {
+    color: #328cc1;
+}
+
+/* visited link */
+a:visited {
+    color: #d9b310;
+}
+
+table{
+    
+}
