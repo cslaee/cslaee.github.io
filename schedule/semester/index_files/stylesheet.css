@@ -31,7 +31,8 @@ a:visited
 	font-style:normal;
 	text-decoration:underline;
 	text-underline-style:single;
-	font-family:Arial, sans-serif;
+	font-family:Arial;
+	mso-generic-font-family:auto;
 	mso-font-charset:0;}
 .style0
 	{mso-number-format:General;
@@ -1770,29 +1771,29 @@ td
 	mso-pattern:black none;}
 .xl432
 	{mso-style-parent:style113;
-	font-weight:700;
-	font-style:italic;
-	text-align:center;
-	background:white;
-	mso-pattern:black none;}
-.xl433
-	{mso-style-parent:style113;
-	font-size:9.0pt;
-	font-weight:700;
-	font-style:italic;
-	text-align:center;
-	background:white;
-	mso-pattern:black none;}
-.xl434
-	{mso-style-parent:style113;
 	font-size:12.0pt;
 	font-weight:700;
 	text-align:center;
 	background:white;
 	mso-pattern:black none;}
-.xl435
+.xl433
 	{mso-style-parent:style113;
 	font-size:11.0pt;
+	text-align:center;
+	background:white;
+	mso-pattern:black none;}
+.xl434
+	{mso-style-parent:style113;
+	font-weight:700;
+	font-style:italic;
+	text-align:center;
+	background:white;
+	mso-pattern:black none;}
+.xl435
+	{mso-style-parent:style113;
+	font-size:9.0pt;
+	font-weight:700;
+	font-style:italic;
 	text-align:center;
 	background:white;
 	mso-pattern:black none;}
