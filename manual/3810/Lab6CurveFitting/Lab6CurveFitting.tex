@@ -1,0 +1,137 @@
+\documentclass[12pt,oneside]{article}
+\usepackage{amsmath} 
+\usepackage{fancyhdr}
+\usepackage{graphicx, multicol} 
+\usepackage{enumitem}
+%\usepackage{csquotes}
+\usepackage[letterpaper,textwidth=7.0in,textheight=8.6in]{geometry}
+\pagestyle{fancy}
+\cfoot{created by Deborah Won for EE3810: Sensors, Instrumentation, and Data Acquisition}
+\rhead{\thepage}
+\chead{}
+\renewcommand{\footrulewidth}{\headrulewidth}
+%\thispagestyle{empty}
+%\renewcommand{\headrulewidth}{0.0pt}
+
+\begin{document}
+\begin{center}
+\Large{EE3810 Lab 6: Temperature Sensor: Accuracy and Sensitivity\\}
+\large{Instructor: Won\\
+Department of Electrical and Computer Engineering\\
+California State University, Los Angeles\\}
+\end{center}
+%\maketitle
+
+\section{Concepts}
+\begin{multicols}{2}
+\underline{Physiology}
+\begin{enumerate}
+\item temperature regulation
+\item homeostasis
+\item cutaneous receptors
+\item vascular constriction / dilation
+\end{enumerate}
+
+\columnbreak
+
+\underline{Engineering}
+\begin{enumerate}
+\item feedback
+\item sensors
+\item data acquisition
+\item mean value
+\item baseline
+\item linear regression
+\end{enumerate}
+
+\end{multicols}
+
+\section{Objectives} 
+In this experiment, you will
+\begin{enumerate}
+\item Use curve fitting to compare the rate of recovery from cold in two different skin regions.
+\item  Correlate rate of recovery with vascularity.
+\end{enumerate}
+
+\section{Pre-lab reading / assignment}
+\begin{itemize}
+\item Thibodeau pp. 578 - 580
+\item Essick 5.1 - 5.7; review 2.2-2.3 and 4.1-4.3
+%\item Determine the relationship between the voltage output of the temperature probe and the resistance of the sensing element.
+\end{itemize}
+
+\section{Background}
+\begin{quote}
+"Homeostasis refers to the body’s ability to maintain internal conditions (e.g., temperature, pH, hydration) within the narrow limits that are optimal for the continuation of metabolic processes. When these optimal conditions are disturbed by a change in the environment, body systems work to return them to normal. 
+
+Many of the chemical reactions and cellular processes necessary to sustain human life occur most readily at a body temperature of approximately 37.0°C (98.6°F). Homeostatic mechanisms work to maintain this temperature, regardless of changes in the external environment. Changes in temperature are sensed by the skin, which is well-designed to counteract these changes. Beneath the protective epidermal layer of the skin lies the dermis, which contains sweat and oil glands and a rich blood supply (see Figure 1).
+
+The dermal tissues influence body temperature by either allowing or diverting the blood’s access to the surface of the skin. When an area is exposed to the cold, small arterioles in the dermis constrict, allowing less than normal blood flow to that area and protecting core body temperature. When cold is removed, the blood supply to the skin increases again as the arterioles dilate. Exposure to heat causes blood vessels to dilate, allowing heat to dissipate from the skin’s surface, and resulting in a flushed or red appearance. Other examples of the regulation of body temperature through the action of the skin’s blood supply include the dilatation seen with embarrassment and the constriction and resulting paleness that occurs with fear. Dilatation also occurs with ingestion of alcohol. 
+
+Human skin temperature is maintained at approximately 33°C (91°F). This temperature can be referred to as the skin temperature “set point.” Regions of skin with higher vascularity (containing more blood vessels) will return more quickly to the set point after a disturbance than regions with less vascularity. In this experiment, you will compare the rate of recovery from cold in two different skin regions and draw conclusions about the vascularity of these areas.
+
+Important: Inform your instructor of any possible health problems that might be exacerbated if you participate in this exercise."
+\end{quote}
+
+--taken from \textit{Human Physiology with Vernier}
+
+\section{Procedure}
+\subsection{Temperature recovery by skin of upper arm}
+\begin{enumerate}
+\item	Connect the Surface Temperature Sensor to LabQuest. Choose New from the File menu.
+\item	On the Meter screen, tap Length. Change the data-collection length to 120 seconds. Select OK.
+\item	Remove excess oil from the skin over the biceps with soap and water or alcohol. Tape the Surface Temperature Sensor to the upper arm, over the area of the biceps. Be sure to tape the thermistor end (the tip) of the sensor directly to the arm (see Figure 2). 
+\item	Answer DA Q1a. Start data collection. Collect data for 50 s to obtain a baseline recording of the temperature. Stop data collection after 50 s. Answer DA Q1b.
+\item	Determine the baseline temperature.
+\begin{enumerate}
+\item	Examine the graph and identify the region of the graph where the temperature was constant (baseline region).
+\item	Tap and drag your stylus across the baseline region to select these data points.
+\item	Choose Statistics from the Analyze menu.
+\item	Record the mean temperature value in your data table as the baseline temperature. 
+\end{enumerate}
+\item	Remove the Surface Temperature Sensor from the arm. Obtain a piece of ice and hold the ice over the area of the upper arm to which the Surface Temperature Sensor was affixed. Hold the ice cube in place for 30 s.
+\item	Remove the ice and quickly blot the area dry with a towel. DO NOT RUB as friction can cause an increase in skin temperature. 
+\item	Tape the Surface Temperature Sensor to the upper arm again, in the same area of the biceps where the ice was held. 
+\item	Start data collection. Data will be collected for 120 s. 
+\item	Determine the rate of recovery.
+\begin{enumerate}
+\item	First find the initial rate of recovery by selecting the linear portion of data collected just after the ice was removed. Tap and drag over the region to select this region. 
+\item	Choose Curve Fit from the Analyze menu. Select Linear as the Fit Equation. 
+\item	Record the slope, m, for the run in Table 1. Select OK.
+\item	Then, find the steady state rate of recovery by selecting about 50s of data immediately after the initial rise, and performing the Linear Fit from the Analyze menu.
+\end{enumerate}
+
+\subsection{Temperature Recovery by Underarm}
+\item		Place the Surface Temperature Sensor under the arm in the armpit. Remove excess oil from the skin with soap and water or alcohol to improve the adhesion of the tape to the skin. 
+\item		Start data collection. Collect data for 50 s to obtain a baseline recording of the temperature. Determine the baseline temperature. Record the baseline temperature in Table 1.
+\item		Remove the Surface Temperature Sensor, and leave the sensor tip exposed to air. Obtain a piece of ice and hold the ice under the arm to which the Surface Temperature Sensor was affixed. Hold the ice cube in place for 30 s.
+\item		Remove the ice and quickly blot the area dry with a towel. Important: Do not rub as friction can cause an increase in skin temperature.
+\item		Place the Surface Temperature Sensor under the arm again, in the same area where the ice was touching.
+\item		Start data collection. Data collection will continue for 120 s.
+\item		Determine the initial rate of recovery and steady-state rate of recovery, as in part 10.
+
+\subsection{Temperature Recovery by Facial Skin}
+\item	Tape the Surface Temperature Sensor to the face, below the cheek bone, approximately 3 cm from the corner of the mouth, looping the sensor wire over the ear for stability (see Figure 3). Remove excess oil from the skin with soap and water or alcohol to improve the adhesion of the tape to the skin. Be sure to tape the thermistor end (the tip) of the sensor directly to the cheek. 
+\item	Start data collection. Collect data for 50 s to obtain a baseline recording of the temperature. Determine the baseline temperature. Record the baseline temperature in Table 1.
+\item	Remove the Surface Temperature Sensor from the face. Obtain a piece of ice and hold the ice over the area of the cheek to which the Surface Temperature Sensor was affixed. Avoid placing the ice cube on the cheek bone, as this may cause headache. Hold the ice cube in place for 30 s.
+\item	Remove the ice and quickly blot the area dry with a towel. Important: Do not rub as friction can cause an increase in skin temperature.
+\item	Tape the Surface Temperature Sensor to the face again, in the same area where the ice was touching.
+\item	Start data collection. Data collection will continue for 120 s.
+\item	Determine the initial rate of recovery and steady-state rate of recovery, as in part 10.
+
+\end{enumerate}
+
+\section{Questions}
+\begin{enumerate}
+\item   This question refers to the baseline recording:
+\begin{enumerate}
+\item   Do you expect the temperature to be basically constant or show large changes during this baseline recording?  Why?
+\item   What did you observe?  How would you explain your observations? (e.g., if there were only large changes at a certain period in the recording, why was that the case?)
+\end{enumerate}
+\item   Show computation of the slope and intercept of the linear regression for each of the runs (upper arm, armpit, face).  Create a table to show how these values compare with the coefficients derived by LabQuest?
+\item   Which area of skin tested (upper arm, armpit, face) had the most rapid recovery of temperature after cooling? Explain this result. (i.e., what physiological factors most influence the rate of recovery)
+\item   Alcohol causes dilatation of arterioles and a sensation of warmth. Would you recommend that someone who is stranded in the snow drink alcohol to keep warm? Why or why not?
+\item   A condition called hyperthermia (heat prostration) can result when the body’s homeostatic mechanisms are no longer adequate to counter the effect of high external temperatures. Describe the skin color of someone who is in the first stages of hyperthermia and relate it to what you know about vasoconstriction and vasodilation as methods of temperature regulation in the body.
+\end{enumerate}
+
+\end{document}

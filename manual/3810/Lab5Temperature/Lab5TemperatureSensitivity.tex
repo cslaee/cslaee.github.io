@@ -1,0 +1,111 @@
+\documentclass[12pt,oneside]{article}
+\usepackage{amsmath} 
+\usepackage{fancyhdr}
+\usepackage{graphicx, multicol} 
+\usepackage{enumitem}
+%\usepackage{csquotes}
+\usepackage[letterpaper,textwidth=7.0in,textheight=8.6in]{geometry}
+\pagestyle{fancy}
+\cfoot{created by Deborah Won for EE3810: Sensors, Instrumentation, and Data Acquisition}
+\rhead{\thepage}
+\chead{}
+\renewcommand{\footrulewidth}{\headrulewidth}
+%\thispagestyle{empty}
+%\renewcommand{\headrulewidth}{0.0pt}
+
+\begin{document}
+\begin{center}
+\Large{EE3810 Lab 5: Measuring Temperature and Sensor Characteristics\\}
+\large{Instructor: Won\\
+Department of Electrical and Computer Engineering\\
+California State University, Los Angeles}
+\end{center}
+%\maketitle
+
+\section{Concepts}
+\begin{enumerate}
+\item sensors
+\item data acquisition
+\item calibration
+\item sensitivity
+\item accuracy
+\item precision
+\end{enumerate}
+
+\section{Objectives} 
+In this experiment, you will
+\begin{enumerate}
+\item create a VI which monitors temperature
+\item understand how to collect data from a temperature probe in LabView
+\item learn how to use the {\tt formula node} function in LabView
+\item learn how to determine sensitivity of a sensor and understand what sensitivity tells us
+\item measure accuracy and precision of a sensor
+\item understand the difference between these different sensor characteristics
+\end{enumerate}
+
+\section{Pre-lab reading / assignment}
+\begin{itemize}
+\item Thibodeau pp. 578 - 580
+\item Carr \& Brown pp. 86-91
+\item Essick 5.1 - 5.7; review 2.2-2.3 and 4.1-4.3
+\item Determine the relationship between the voltage output of the temperature probe and the resistance of the sensing element.
+\end{itemize}
+
+\section{Background}
+\subsection{Temperature probe}
+The temperature probe provided by Vernier is a thermistor-based sensor. The resistance is related to temperature by this equation:
+
+\begin{equation*}
+T = (k_0 + k_1\cdot\ln{R} + k_2\cdot(\ln{R})^3)^{-1} - 273.5
+\end{equation*}
+
+ The sensing element is connected inside the probe to a 15K$\Omega$ resistor, as illustrated below.  
+\begin{figure}[h!]
+\centering
+  \includegraphics[width=4cm]{../../Images/tempProbeVoltageDividerVernier.png}\label{}\caption{Schematic of the internal circuitry of temperature probe.}
+\end{figure}
+
+Review your notes and reading assignments to learn more about sensitivity, accuracy, precision, and resolution.
+
+\section{Procedure}
+\subsection{Creating the temperature monitor VI}
+\begin{enumerate}
+\item First show that you can read in the temperature probe signal using DAQ Assistant and a waveform chart.
+\item Add a mathscript node to obtain a temperature reading in $^oC$.
+\item Display the temperature value in both $^oC$ and $^oF$, after adding some arithmetic blocks to do the conversion.
+\end{enumerate}
+
+\subsection{Adjusting the temperature}\label{adjustTemp}
+You will repeatedly use this procedure to carry out section \ref{measureTemp}
+\begin{enumerate}
+\item Use the electric tea kettle to heat water up.
+\item Add cold water to your bowl.  Measure the temperature with the conventional thermometer.
+\item Get a cup of hot water, and slowly add the hot water while another person gently stirs the water bath until the bath reaches the desired temperature.
+\item Keep adding small amounts of cold and hot water to target the different temperature ranges.
+\end{enumerate}
+
+\subsection{Measuring temperature}\label{measureTemp}
+The purpose of this procedure is to obtain several measurements at different ranges of temperatures: high end (~35 - $45^o$C); mid-range (~20-30$^o$C); and low end (5-15$^o$C) 
+\begin{enumerate}
+\item First target the low end; start at the lowest temperature: 
+\item \label{startLoop} Measure the temperature of the bath with the thermometer, and the output voltage of your temperature monitor VI.
+\item \label{endLoop} Slightly warm the water water bath using the method described in \ref{adjustTemp}.
+\item Repeat steps \ref{startLoop} - \ref{endLoop} until you hit the upper limit of the given temerature range. Go back down, taking measurements.  Once you reach the lower limit, adjust the temperature of the bath to jump to the lower end of the next range. Then repeat  steps \ref{startLoop} - \ref{endLoop} until you have about 10 measurements from each temperature range (~5 measurements going up the range, and 5 coming back down the range).
+\end{enumerate}
+
+\subsection{Conducting sensitivity analysis}%\label{sensitivityAnalysis}
+\begin{enumerate}
+\item Enter your data in MS Excel.
+\item Look up the help function on {\tt LINEST}.  After you understand how it works, apply the {\tt LINEST} function to your data to obtain an estimate of the sensitivity in each range of temperatures.  %slope = INDEX(LINEST(G10:G18, F10:F18), 1); yInt = INDEX(LINEST(G10:G18, F10:F18), 2)
+\end{enumerate}
+
+\section{Questions}
+\begin{enumerate}
+\item How accurate is your temperature monitor? 
+\item How sensitive is your temperature monitor? 
+\item How precise is your temperature monitor?
+\item How variable are the results across different temperature ranges?
+\item Choose a biomedical application for which this temperature monitor could be used. How would you improve the sensor characteristics to make this temperature monitor better tuned for your selected biomedical application?
+\end{enumerate}
+
+\end{document}

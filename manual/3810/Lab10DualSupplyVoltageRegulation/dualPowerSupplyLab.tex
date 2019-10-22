@@ -1,0 +1,100 @@
+\documentclass[12pt,oneside]{article}
+\usepackage{amsmath} 
+\usepackage{fancyhdr}
+\usepackage{graphicx, multicol} 
+\usepackage{enumitem}
+\usepackage[letterpaper,textwidth=7.0in,textheight=8.6in]{geometry}
+\pagestyle{fancy}
+\cfoot{created by Deborah Won for EE3810: Sensors, Instrumentation, and Data Acquisition}
+\rhead{\thepage}
+\chead{}
+\renewcommand{\footrulewidth}{\headrulewidth}
+%\thispagestyle{empty}
+%\renewcommand{\headrulewidth}{0.0pt}
+
+\begin{document}
+\begin{center}
+\Large{EE3810 Lab 10 \\
+Powering the Epilepsy Detection Circuit}
+\large{Instructor: Won\\
+Department of Electrical and Computer Engineering\\
+California State University, Los Angeles}
+\end{center}
+%\maketitle
+
+\section{Concepts}
+\begin{enumerate}
+	\item power sources
+	\item energy capacity
+	\item voltage regulator
+	\item dual polarity
+	\item power efficiency
+\end{enumerate}
+
+%\section{Background}
+%
+%\subsection{Data Acquisition}
+%
+%
+%\begin{figure}[h!]
+%\centering
+%  \includegraphics[width=17cm]{../Images/myDAQBlkDiagram.png}\label{}\caption{Block diagram of the NI myDAQ device.}
+%\end{figure}
+
+\section{Objectives} 
+In this experiment, you will create the power generation circuit to power up your a pseudo epileptic seizure detection system and enables the system to be portable.  Thus, the power generation circuit will meet the following specifications:
+\begin{enumerate}
+\item runs off two 9V batteries
+\item provides a $\pm5$V power supply and stable operation
+\item does not dissipate power when seizure detection is not needed
+\item indicates to the user when power is being used
+\end{enumerate}.
+
+You will also
+\begin{enumerate}%[resume]
+\item understand the value of the voltage regulation
+\item gain more experience with prototyping and using electronic test equipment
+%\item learn to use electronic test equipment
+\item consider the value of adding indicators and switches to circuits
+\end{enumerate}
+
+\section{Pre-lab reading / assignment}
+\begin{itemize}
+\item Read the "Basic Concepts of Linear Regulator" article (Linear Technology Application Note 140) %https://www.youtube.com/watch?v=9NtKlLPPv8s  %http://powerelectronics.com/regulators/back-basics-voltage-regulator-ics-part-1
+\item Design a voltage divider circuit that produces $V_{DD}$ and $V_{SS}$ that could be used to power the detection circuit using 9V batteries.  (Draw the circuit schematic and the give component values). 
+%\item Sketch the circuit schematic diagram of the power generation circuit.
+\end{itemize}
+
+%\section{Background/Overview}
+
+\section{Procedure}
+In this lab, you will create a 5V power supply to run the seizure detection circuit in one of two ways: 1) using a simple resistive voltage divider; and 2) using the voltage regulators (MCP1702 and MC79L05).
+
+\subsection{Voltage Divider}
+\begin{enumerate}
+\item Wire up the voltage dividers.
+\item Measure $V_{DD}$ and $V_{SS}$, the outputs of the voltage dividers.
+\item Now, power up the the seizure detection circuit by connecting your voltage divider.
+\item Again, measure $V_{DD}$ and $V_{SS}$.
+\item Measure battery power consumed.
+\end{enumerate}
+
+\subsection{Voltage Regulator Power Generation Circuit}
+\begin{enumerate}
+\item Wire up the power generation circuit.
+\item Measure $V_{R}^+$ and $V_{R}^-$, the outputs of the voltage regulator.
+\item Now, power up the the seizure detection circuit by connecting your power generation circuit.
+\item Again, measure $V_{R}^+$ and $V_{R}^-$, the output of the voltage regulator.
+\item Measure battery power consumed.
+%\item Add (a) rocker switch(es) to the circuit to add a power off mode to your circuit.
+\end{enumerate}
+
+\section{Questions}
+Summarize the advantages and disadvantages of using the linear regulator, and ways to further improve the design of the power generation circuit.  In doing so, you will want to\textit{ include} answer to the following questions. 
+\begin{enumerate}
+\item With the voltage divider, how did $V_{DD}$ change from when the epilepsy detection circuit was disconnected to when it was connected? Explain what caused this change.
+\item Similarly for the voltage regulator circuit, how did $V_{R}$ change from when the epilepsy detection circuit was disconnected to when it was connected? Again, explain the output behavior.
+%\item How much power do you save by adding the switches?
+\end{enumerate}
+
+\end{document}
