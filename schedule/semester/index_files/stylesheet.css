@@ -1719,14 +1719,6 @@ td
 	background:white;
 	mso-pattern:black none;}
 .xl424
-	{mso-style-parent:style113;
-	font-size:14.0pt;
-	font-weight:700;
-	font-style:italic;
-	text-align:center;
-	background:white;
-	mso-pattern:black none;}
-.xl425
 	{mso-style-parent:style126;
 	color:blue;
 	font-size:7.0pt;
@@ -1736,6 +1728,14 @@ td
 	background:white;
 	mso-pattern:black none;
 	white-space:normal;}
+.xl425
+	{mso-style-parent:style113;
+	font-size:14.0pt;
+	font-weight:700;
+	font-style:italic;
+	text-align:center;
+	background:white;
+	mso-pattern:black none;}
 .xl426
 	{mso-style-parent:style113;
 	font-size:18.0pt;
